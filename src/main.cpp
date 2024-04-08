@@ -62,11 +62,9 @@ int main() {
         int inicio = 0;
         int fin = longitudEntrada-1;
 
-        std::vector<int> diferenciaAcumulada(longitudEntrada, -1);
-
         long double timestampInicio = (long double) clock();
 
-        std::pair<int,int> solucion = DyV(inicio, fin, cadMinima, cadenaEntrada, diferenciaAcumulada);
+        std::pair<int,int> solucion = DyV(inicio, fin, cadMinima, cadenaEntrada);
 
         long double timestampFinal = (long double) clock();
         long double timestamp = (long double) ((timestampFinal - timestampInicio)) / CLOCKS_PER_SEC;

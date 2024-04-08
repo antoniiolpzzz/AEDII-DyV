@@ -7,27 +7,23 @@
 using namespace std;
 
 
-int recursiva(int p, int q, string &cadena, vector<int> &diferenciaAcumulada){
-
-    if (diferenciaAcumulada[p] != -1) {
-        return diferenciaAcumulada[p];
-    }
-
+int recursiva(int p, int q, string &cadena){
 
     int difAcumulada = 0;
     for (int i = p; i<q; i++) {
         difAcumulada = difAcumulada + abs(cadena[i]-cadena[i+1]);
     }
 
-    diferenciaAcumulada[p] = difAcumulada;
     return difAcumulada;
 }
+
 
 
 bool pequeno(int p, int q, int &cadMinima){
 
     return (q-p) == cadMinima - 1;
 }
+
 
 
 pair<int,int> solDirecta(int p, int q, string &cadena){
@@ -41,27 +37,27 @@ pair<int,int> solDirecta(int p, int q, string &cadena){
 }
 
 
+
 int dividirCadena(int p, int q){
 
     return (p+q)/2;
 }
 
 
-pair<int,int> combinar (pair<int,int> &solA, pair<int,int> &solB, int p, int q, int &m, int &cadMinima, string &cadena, vector<int> &diferenciaAcumulada){
+
+pair<int,int> combinar (const pair<int,int> &solA, const pair<int,int> &solB, int p, int q, int &m, int &cadMinima, string &cadena){
 
     pair<int,int> maxUnion = pair<int,int>(-1,-1);
+    
 
-    //int i = max(p, m-cadMinima+1)
-    //i< min(q, m+1)
     for (int i=max(p, m-cadMinima+1); i<min(q, m+1); i++) {
 
-        int tmp = recursiva(i, i+cadMinima-1, cadena, diferenciaAcumulada); /*m OR p+cadMinima-1*/
+        int tmp = recursiva(i, i+cadMinima-1, cadena); /*m OR p+cadMinima-1*/
 
         if (tmp > maxUnion.second){
-            maxUnion = pair<int,int>(i, tmp);
+            maxUnion = make_pair(i, tmp);
         }
     }
-
 
     if (maxUnion.second > max(solA.second, solB.second)){
 
@@ -80,7 +76,7 @@ pair<int,int> combinar (pair<int,int> &solA, pair<int,int> &solB, int p, int q, 
 
 
 
-pair<int,int> DyV (int p, int q, int &cadMinima, string &cadena, vector<int> &diferenciaAcumulada){
+pair<int,int> DyV (int p, int q, int &cadMinima, string &cadena){
 
     if (pequeno(p, q, cadMinima)){
 
@@ -92,8 +88,8 @@ pair<int,int> DyV (int p, int q, int &cadMinima, string &cadena, vector<int> &di
 
     }else {
         int m = dividirCadena(p, q);
-        pair<int,int> solA = DyV(p, m, cadMinima, cadena, diferenciaAcumulada);
-        pair<int,int> solB = DyV(m+1, q, cadMinima, cadena, diferenciaAcumulada);
-        return combinar(solA, solB, p, q, m, cadMinima, cadena, diferenciaAcumulada);
+        pair<int,int> solA = DyV(p, m, cadMinima, cadena);
+        pair<int,int> solB = DyV(m+1, q, cadMinima, cadena);
+        return combinar(solA, solB, p, q, m, cadMinima, cadena);
     }
 }

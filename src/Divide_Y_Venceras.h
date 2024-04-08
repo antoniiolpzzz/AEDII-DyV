@@ -9,7 +9,7 @@
 #include <vector>
 
 
-int recursiva(int p, int q, std::string &cadena, std::vector<int> &diferenciaAcumulada);
+int recursiva(int p, int q, std::string &cadena);
 
 bool pequeno(int p, int q, int &cadMinima);
 
@@ -17,9 +17,9 @@ std::pair<int,int> solDirecta(int p, int q, std::string &cadena);
 
 int dividirCadena(int p, int q);
 
-std::pair<int,int> combinar (std::pair<int,int> &solA, std::pair<int,int> &solB, int p, int q, int &m, int &cadMinima, std::string &cadena, std::vector<int> &diferenciaAcumulada);
+std::pair<int,int> combinar (const std::pair<int,int> &solA, const std::pair<int,int> &solB, int p, int q, int &m, int &cadMinima, std::string &cadena);
 
-std::pair<int,int> DyV (int p, int q, int &cadMinima, std::string &cadena, std::vector<int> &diferenciaAcumulada);
+std::pair<int,int> DyV (int p, int q, int &cadMinima, std::string &cadena);
 
 
 #endif //AEDII_DYV_DIVIDE_Y_VENCERAS_H
