@@ -31,14 +31,16 @@ Para ejecutar el algoritmo, sigue estos pasos:
 
 Los casos de prueba deben seguir la siguiente estructura:
 
-'NUMERO_DE_CASOS_TOTALES'
-'CADENA_0'
-'M_0'
-'CADENA_1'
-'M_1'
+```
+NUMERO_DE_CASOS_TOTALES'
+CADENA_0'
+M_0'
+CADENA_1'
+M_1'
 ...
-'CADENA_i'
-'M_i'
+CADENA_i'
+M_i
+```
 
 ## Resultados
 
