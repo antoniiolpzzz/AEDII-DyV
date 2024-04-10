@@ -24,8 +24,8 @@ Para ejecutar el algoritmo, sigue estos pasos:
 3. Los ejecutables tomarán como caso de prueba el archivo `casosPrueba.txt` ubicado en el directorio `CASOS DE PRUEBA`, el cual sera previamente introducido por el usuario en la ruta o sera generado por el script.
 4. El script ofrece varias opciones:
 - `0`: Utiliza el fichero `casosPrueba.txt` directamente, sin generar uno nuevo.
-- `1`: Generador de casos (X casos de tamaño de cadena aleatorio entre y ).
-- `2`: Generador incremental (100 casos de , incrementos de por caso).
+- `1`: Generador de casos (X casos de tamaño de cadena aleatorio entre '10^4' y '10^6' ).
+- `2`: Generador incremental (100 casos desde 'N' = '10^4' hasta 'N' = '10^6', incrementos de '10^4' por caso).
 
 ## Estructura de Casos de Prueba
 
