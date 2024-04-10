@@ -65,4 +65,7 @@ TAMAÑO_CADENA, TIEMPO (s), M_(N/1000) X_0
 TAMAÑO_CADENA, TIEMPO (s), M_(N/1000) X_i
 ```
 
+## Licencia
+
+Este proyecto está disponible bajo la [Licencia MIT](LICENSE). Consulta el archivo LICENSE para obtener más detalles.
 ---
