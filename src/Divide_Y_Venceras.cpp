@@ -7,18 +7,6 @@
 using namespace std;
 
 
-int recursiva(int p, int q, string &cadena){
-
-    int difAcumulada = 0;
-    for (int i = p; i<q; i++) {
-        difAcumulada = difAcumulada + abs(cadena[i]-cadena[i+1]);
-    }
-
-    return difAcumulada;
-}
-
-
-
 bool pequeno(int p, int q, int &cadMinima){
 
     return (q-p) == cadMinima - 1;
@@ -52,10 +40,10 @@ pair<int,int> combinar (const pair<int,int> &solA, const pair<int,int> &solB, in
 
     for (int i=max(p, m-cadMinima+1); i<min(q, m+1); i++) {
 
-        int tmp = recursiva(i, i+cadMinima-1, cadena); /*m OR p+cadMinima-1*/
-
-        if (tmp > maxUnion.second){
-            maxUnion = make_pair(i, tmp);
+        pair<int,int> tmp = solDirecta(i, i+cadMinima-1, cadena);
+        
+        if (tmp.second > maxUnion.second){
+            maxUnion = tmp;
         }
     }
 

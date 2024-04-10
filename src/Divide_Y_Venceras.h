@@ -9,8 +9,6 @@
 #include <vector>
 
 
-int recursiva(int p, int q, std::string &cadena);
-
 bool pequeno(int p, int q, int &cadMinima);
 
 std::pair<int,int> solDirecta(int p, int q, std::string &cadena);
