@@ -32,14 +32,14 @@ Para ejecutar el algoritmo, sigue estos pasos:
 Los casos de prueba deben seguir la siguiente estructura:
 
 ```
-NUMERO_DE_CASOS_TOTALES'
-CADENA_0'
-M_0'
-CADENA_1'
-M_1'
+NUMERO_DE_CASOS_TOTALES
+CADENA_X_0
+M_X_0
+CADENA_X_1
+M_X_1
 ...
-CADENA_i'
-M_i
+CADENA_X_i
+M_X_i
 ```
 
 ## Resultados
@@ -49,13 +49,13 @@ Después de la ejecución, encontrarás los siguientes archivos en los directori
 Directorio 'RESULTADOS':
 - `resultados.txt` y `resultadosDirecta.txt`: presentan un formato como este:
 ```
-CADENAX_0 [0-99]
-Posición de inicio: pX_0
-Diferencia máxima: dX_0
+CADENA_X_0 [0-99]
+Posición de inicio: p_X_0
+Diferencia máxima: d_X_0
 ...
-CADENAX_i [0-99]
-Posición de inicio: pX_i
-Diferencia máxima: dX_i
+CADENA_X_i [0-99]
+Posición de inicio: p_X_i
+Diferencia máxima: d_X_i
 ```
 Directorio 'INFORMACION DE TIEMPOS':
 - `infoTiempos.csv` y `infoTiemposDirecta.csv`: presentan un formato como este:
@@ -65,6 +65,4 @@ TAMAÑO_CADENA, TIEMPO (s), M_(N/1000) X_0
 TAMAÑO_CADENA, TIEMPO (s), M_(N/1000) X_i
 ```
 
---- 
-
-Siéntete libre de agregar cualquier información adicional que consideres relevante.
+---
