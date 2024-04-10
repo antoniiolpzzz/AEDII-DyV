@@ -41,3 +41,6 @@ Creacion_Directorios:
 	@mkdir -p "RESULTADOS"
 	@mkdir -p "INFORMACION DE TIEMPOS"
 	@mkdir -p "CASOS DE PRUEBA"
+
+run:
+	bash run.sh
