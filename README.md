@@ -21,7 +21,7 @@ Para ejecutar el algoritmo, sigue estos pasos:
 
 1. Ejecutar el script `run.sh` o utilizar el comando `make run`.
 2. Esto compilará el proyecto, generará casos de prueba y ejecutará los algoritmos `SolucionDirecta` y `DivideyVenceras`.
-3. Los ejecutables tomarán como caso de prueba el archivo `casosPrueba.txt` ubicado en el directorio `CASOS DE PRUEBA`, evitando así la generación de uno nuevo.
+3. Los ejecutables tomarán como caso de prueba el archivo `casosPrueba.txt` ubicado en el directorio `CASOS DE PRUEBA`, el cual sera previamente introducido por el usuario en la ruta o sera generado por el script.
 4. El script ofrece varias opciones:
 - `0`: Utiliza el fichero `casosPrueba.txt` directamente, sin generar uno nuevo.
 - `1`: Generador de casos (X casos de tamaño de cadena aleatorio entre y ).
@@ -31,23 +31,20 @@ Para ejecutar el algoritmo, sigue estos pasos:
 
 Los casos de prueba deben seguir la siguiente estructura:
 
-
-
-
-NUMERO_DE_CASOS_TOTALES
-CADENA_0
-M_0
-CADENA_1
-M_1
+'NUMERO_DE_CASOS_TOTALES'
+'CADENA_0'
+'M_0'
+'CADENA_1'
+'M_1'
 ...
-CADENA_i
-M_i
+'CADENA_i'
+'M_i'
 
 ## Resultados
 
 Después de la ejecución, encontrarás los siguientes archivos en los directorios correspondientes:
 
-- **RESULTADOS**:
+Directorio 'RESULTADOS':
 - `resultados.txt` y `resultadosDirecta.txt`: presentan un formato como este:
 ```
 CADENAX_0 [0-99]
@@ -58,7 +55,7 @@ CADENAX_i [0-99]
 Posición de inicio: pX_i
 Diferencia máxima: dX_i
 ```
-- **INFORMACION DE TIEMPOS**:
+Directorio 'INFORMACION DE TIEMPOS':
 - `infoTiempos.csv` y `infoTiemposDirecta.csv`: presentan un formato como este:
 ```
 TAMAÑO_CADENA, TIEMPO (s), M_(N/1000) X_0
