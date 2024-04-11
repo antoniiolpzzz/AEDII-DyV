@@ -39,3 +39,6 @@ makefile_backup
 /graphs/.M FIJA
 /INFORMACION DE TIEMPOS
 README.md.tmp.html
+/graphs/.ipynb_checkpoints
+/graphs/.ipynb_checkpoints
+/.idea
